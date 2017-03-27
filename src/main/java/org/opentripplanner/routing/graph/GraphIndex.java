@@ -417,7 +417,7 @@ public class GraphIndex {
             snapshot = graph.timetableSnapshotSource.getTimetableSnapshot();
         }
         Date date = new Date(startTime * 1000);
-        ServiceDate[] serviceDates = {new ServiceDate(date).previous(), new ServiceDate(date), new ServiceDate(date).next()};
+        ServiceDate[] serviceDates = {new ServiceDate(new Date(startTime*1000)).previous(), new ServiceDate(new Date(startTime*1000)), new ServiceDate(new Date(startTime*1000)).next()};
 
         for (TripPattern pattern : patternsForStop.get(stop)) {
 
